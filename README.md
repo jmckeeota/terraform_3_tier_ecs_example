@@ -4,7 +4,7 @@ Thank you for viewing this Terraform demonstration!
 
 This project represents an ECS twist on the traditional three-tier web service.  I created it mostly to become better aquainted with ECS and Terraform.  
 
-Tasks from ECS autoscaling are launched in an application subnet running instances of [phpmyadmin](https://hub.docker.com/_/phpmyadmin) which are connected to an RDS instance in a separate subnet. These tasks are accessible through an internet-facing load balancer.
+Tasks from ECS autoscaling are launched in an application subnet running instances of [phpmyadmin](https://hub.docker.com/_/phpmyadmin) which are connected to an RDS instance in a separate subnet. These tasks are accessible through an internet-facing load balancer on port 80.
 
 Architecture demonstrates:
 - A configurable root main.tf file
