@@ -10,6 +10,8 @@ locals {
     az1_config = "us-west-1a"
     #Specify the second availability zone
     az2_config = "us-west-1c"
+    #Specify a simple AWS linux AMI from the region
+    ami = "ami-09bc3667a66efbf89"
 }
 
 terraform {
@@ -71,6 +73,7 @@ module "security" {
 
 module "app" {
     source = ".//modules/app"
+    ami = "${local.ami}"
     module_name = "${local.architecture_name}_app"
     app_security_group = module.security.app_security_group
     autoscaling_subnet = module.network.app_subnet

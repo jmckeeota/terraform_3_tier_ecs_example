@@ -55,3 +55,8 @@ variable "db_host" {
   type = string
   sensitive = true
 }
+
+variable "ami" {
+  description = "ami"
+  type = string
+}

@@ -1,5 +1,5 @@
 resource "aws_launch_configuration" "ecs_launch_config" {
-    image_id             = "ami-09bc3667a66efbf89"
+    image_id             = var.ami
     iam_instance_profile = var.ecs_iam_role_name
     security_groups      = [var.app_security_group]
     user_data            = "#!/bin/bash\necho ECS_CLUSTER=${var.module_name}_cluster >> /etc/ecs/ecs.config"
