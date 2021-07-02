@@ -7,7 +7,7 @@ This project represents an ECS twist on the traditional three-tier web service. 
 Tasks from ECS autoscaling are launched in an application subnet running instances of [phpmyadmin](https://hub.docker.com/_/phpmyadmin) which are connected to an RDS instance in a separate subnet. These tasks are accessible through an internet-facing load balancer on port 80.
 
 Architecture demonstrates:
-- A configurable root main.tf file
+- A configurable root variables.tf file
 - An application subnet with groups and routing that allow secure and limited one-way flow of traffic
 - IAM permissions that allow bastionless SSM connections to instances in the application subnet
 - Task-level load balancing
