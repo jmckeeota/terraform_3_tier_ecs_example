@@ -2,7 +2,7 @@ Thank you for viewing this Terraform demonstration!
 
 ![Architecture_picture](https://github.com/jmckeeota/terraform_3_tier_ecs_example/blob/master/Design.png)
 
-This project represents an ECS twist on the traditional three-tier web service.  I created it mostly to become better aquainted with ECS and Terraform.  
+This project represents an ECS twist on the traditional three-tier web service.  I created it mostly to become better acquainted with ECS and Terraform.  
 
 Tasks from ECS autoscaling are launched in an application subnet running instances of [phpmyadmin](https://hub.docker.com/_/phpmyadmin) which are connected to an RDS instance in a separate subnet. These tasks are accessible through an internet-facing load balancer on port 80.
 
